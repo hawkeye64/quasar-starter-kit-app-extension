@@ -2,7 +2,7 @@
  * Prints the final message with instructions of necessary next steps.
  * @param {Object} data Data from questionnaire.
  */
-exports.printMessage = function printMessage(data, { green, yellow }) {
+module.exports.printMessage = function (data, { green, yellow }) {
   const message = `
  ${green('[*] Quasar CLI Extension project initialization finished!')}
 
@@ -12,12 +12,13 @@ To get started:
     `${data.inPlace ? '' : `cd ${data.destDirName}\n  `}`
   )}
 
-Documentation can be found at: https://v1.quasar-framework.org
+Documentation can be found at: https://quasar.dev
 
 Quasar is relying on donations to evolve. We'd be very grateful if you can
-take a look at: https://www.patreon.com/quasarframework
+read our manifest on "Why donations are important": https://quasar.dev/why-donate
+Donation campaign: https://donate.quasar.dev
 Any amount is very welcomed.
-If invoices are required, please first contact razvan.stoenescu@gmail.com
+If invoices are required, please first contact razvan@quasar.dev
 
 Please give us a star on Github if you appreciate our work:
 https://github.com/quasarframework/quasar
